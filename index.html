@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SplitFlow - Expense Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+  <main class="container">
+    <header>
+      <h1>SplitFlow</h1>
+      <p>Split group expenses easily</p>
+    </header>
+
+    <section class="card">
+      <h2>Add an Expense</h2>
+
+      <form id="expense-form">
+        <label for="title">Expense name</label>
+        <input
+          id="title"
+          type="text"
+          placeholder="Example: Dinner"
+          required
+        >
+
+        <label for="amount">Total amount (₹)</label>
+        <input
+          id="amount"
+          type="number"
+          min="1"
+          step="0.01"
+          placeholder="Example: 900"
+          required
+        >
+
+        <label for="paid-by">Paid by</label>
+        <input
+          id="paid-by"
+          type="text"
+          placeholder="Example: Rohith"
+          required
+        >
+
+        <label for="people">Number of people sharing</label>
+        <input
+          id="people"
+          type="number"
+          min="2"
+          placeholder="Example: 3"
+          required
+        >
+
+        <button type="submit">Calculate Split</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Expense History</h2>
+      <p id="empty-message">No expenses added yet.</p>
+      <div id="expense-list"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
